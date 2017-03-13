@@ -3,10 +3,18 @@ angular.modules('sendhalp', [
 ])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
-    .when()
-    .when()
-    .when()
-    .otherwise();
+    .when('', {
+
+    })
+    .when('', {
+
+    })
+    .when('', {
+
+    })
+    .otherwise({
+
+    });
   //templateUrl
   //controller
   //redirectTo
