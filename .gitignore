@@ -2,12 +2,17 @@
 ._*
 
 # Files that might appear on external disk
-node_modules/
+node_modules
+npm-debug.log
 
 # Floobits
 .floo
 .floobit
 .flooignore
+
+# Local development
+*.env
+*.dev
 
 # Sublime files
 mvp-project-hrr22.sublime-workspace
