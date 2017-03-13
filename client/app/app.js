@@ -2,7 +2,8 @@ angular.module('sendhalp', [
   'ngRoute',
   'sendhalp.browse',
   'sendhalp.saved',
-  'sendhalp.submit'
+  'sendhalp.submit',
+  'sendhalp.factories'
 ])
 
 .config(function($routeProvider, $locationProvider) {
