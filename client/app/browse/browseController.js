@@ -1,17 +1,54 @@
-angular.module('sendhalp.browse', [])
-.controller('BrowseController', function($scope) {
-  // need to set current page type
-    // default to "food"; other option is "drink"
-  // need to store title phrase in array
-  // need to store random phrase for current category
-    // GET later
-  // need to store entries into array
-    // GET later
-    // sort into separate arrays
-  // call function to add to saved list (ye, good shit)
-    // then call "go to next random entry"
-  // function to "go to next random entry" (hell na)
-  // both "yes" and "no" options should trigger another random phrase for current page type
-  // function to toggle current category
-    // change title as well
+angular.module('sendhalp.browse', [
+  'sendhalp.factories'
+])
+
+.controller('BrowseController', function($scope, Saved) {
+  var foodString = 'food';
+  var drinkString = 'drink';
+
+  // Current page category (default = food)
+  $scope.currCategory = foodString;
+
+  // Array of titles, and phrases for each category
+  $scope.titles = {
+    'food': '',
+    'drink': ''
+  };
+
+  $scope.phrases = {
+    'food': [],    // LATER TO BE POPULATED FROM "GET" REQUEST
+    'drink': []    // LATER TO BE POPULATED FROM "GET" REQUEST
+  };
+
+  $scope.entries = {
+    'food': [],    // LATER TO BE POPULATED FROM "GET" REQUEST
+    'drink': []    // LATER TO BE POPULATED FROM "GET" REQUEST
+  };
+
+  $scope.switchButtonText = {
+    'food': '',
+    'drink': ''
+  };
+
+  console.log($scope.currCategory);
+  console.log($scope.titles);
+  console.log($scope.phrases);
+  console.log($scope.entries);
+
+  $scope.addToList = function() {
+    console.log('addToList called');
+    // add to saved list in factories "Saved"
+    // trigger another random phrase
+  };
+
+  $scope.generateNext = function() {
+    console.log('generateNext called');
+    // trigger random phrase
+  };
+
+  $scope.toggleCategory = function() {
+    console.log('toggleCategory called');
+    // function to toggle current category
+      // change title as well
+  };
 });

@@ -1,8 +1,17 @@
 angular.module('sendhalp.factories', [])
 
 .factory('Saved', function() {
-  // keep storage of saved entry id's
+  var savedEntries = [];
+
+  // function to add to savedEntries
+  // subfunction to see if it's already in the array
+    //error if so
+    //add otherwise
+
   // functions to save, alter, and return array
+  return {
+
+  };
 })
 
 .factory('Entries', function($http) {
