@@ -3,6 +3,7 @@
 
 # Files that might appear on external disk
 node_modules
+project_files
 npm-debug.log
 
 # Floobits
