@@ -1,0 +1,13 @@
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+node_modules/
+
+# Floobits
+.floo
+.floobit
+.flooignore
+
+# Sublime files
+mvp-project-hrr22.sublime-workspace
