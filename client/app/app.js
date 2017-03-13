@@ -1,27 +1,33 @@
-angular.modules('sendhalp', [
-
+angular.module('sendhalp', [
+  'ngRoute',
+  'sendhalp.browse',
+  'sendhalp.saved',
+  'sendhalp.submit'
 ])
+
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
-    .when('', {
-
+    .when('/browse', {
+      templateUrl: 'app/browse/browse.html',
+      controller: 'BrowseController'
     })
-    .when('', {
-
+    .when('/saved', {
+      templateUrl: 'app/saved/saved.html',
+      controller: 'SavedController'
     })
-    .when('', {
-
+    .when('/submit', {
+      templateUrl: 'app/submit/submit.html',
+      controller: 'SubmitController'
+    })
+    .when('/404', {
+      templateUrl: 'app/404.html',
+    })
+    .when('/', {
+      redirectTo: '/browse'
     })
     .otherwise({
-
+      redirectTo: '/404'
     });
-  //templateUrl
-  //controller
-  //redirectTo
 
-  // browse
-  // saved
-  // submit
-  //404
   $locationProvider.hashPrefix('');
 });
