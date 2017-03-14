@@ -1,18 +1,18 @@
 <div class="container">
   <nav class="navigation">
     <ul>
-      <li class="selected">Browse</li>
+      <li><a class="selected">Browse</a></li>
       <li><a href="/#/saved">Saved</a></li>
       <li><a href="/#/submit">Submit</a></li>
     </ul>
   </nav>
 
-  <div class="content">
+  <div class="browse-content">
     <h2>
       {{titles[currCategory]}}<br />
       {{currPhrase}}
     </h2>
-    <div class="browse-content">
+    <div class="browse-detail-box">
       <div class="entry-title">{{currEntry["title"]}}</div>
       <div class="entry-description">Description: {{currEntry["description"]}}</div>
       <div class="entry-url">Source: {{currEntry["url"]}}</div>
