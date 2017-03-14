@@ -11,8 +11,8 @@ angular.module('sendhalp.browse', [
 
   // Array of titles, and phrases for each category
   $scope.titles = {
-    'food': '',
-    'drink': ''
+    'food': 'Title Phrase for food category',
+    'drink': 'Title Phrase for drink category'
   };
 
   $scope.phrases = {
@@ -26,14 +26,13 @@ angular.module('sendhalp.browse', [
   };
 
   $scope.switchButtonText = {
-    'food': '',
-    'drink': ''
+    'food': 'I ain\'t hungry, gimme a drink',   // If on food page, text will say to switch to drink page
+    'drink': 'Can\'t drink on an empty stomach'
   };
 
-  console.log($scope.currCategory);
-  console.log($scope.titles);
-  console.log($scope.phrases);
-  console.log($scope.entries);
+  $scope.generatePhrase = function() {
+
+  };
 
   $scope.addToList = function() {
     console.log('addToList called');
@@ -47,8 +46,16 @@ angular.module('sendhalp.browse', [
   };
 
   $scope.toggleCategory = function() {
-    console.log('toggleCategory called');
-    // function to toggle current category
-      // change title as well
+    if ($scope.currCategory === foodString) {
+      $scope.currCategory = drinkString;
+    } else {
+      $scope.currCategory = foodString;
+    }
   };
+
+  console.log($scope.currCategory);
+  console.log($scope.titles);
+  console.log($scope.phrases);
+  console.log($scope.entries);
+  console.log($scope.switchButtonText);
 });

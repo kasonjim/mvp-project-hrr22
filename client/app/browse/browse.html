@@ -9,7 +9,7 @@
 
   <div class="content">
     <h2>
-      Title Phrase of current category<br />
+      {{titles[currCategory]}}<br />
       Random phrase for current category
     </h2>
     <div class="browse-content">
@@ -20,7 +20,7 @@
     <div class="button-container">
       <div ng-click="addToList()">Ye, dat sounds dank (left)</div>
       <div ng-click="generateNext()">I ain't down for that (right)</div>
-      <div ng-click="toggleCategory()">(depending on current category, display diff text to swap views) - below other 2 buttons</div>
+      <div ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</div>
     </div>
   </div>
 </div>
