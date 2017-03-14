@@ -2,16 +2,16 @@ angular.module('sendhalp.saved', [])
 .controller('SavedController', function($scope, Saved, Entries) {
   $scope.savedItems = {
     'food': Entries.entries['food'].filter(function(foodItem) {
-      return Saved.savedEntries['food'].indexOf(foodItem.id) !== -1;
+      return Saved.savedEntries['food'].indexOf(foodItem._id) !== -1;
     }),
     'drink': $scope.savedDrinkItems = Entries.entries['drink'].filter(function(drinkItem) {
-      return Saved.savedEntries['drink'].indexOf(drinkItem.id) !== -1;
+      return Saved.savedEntries['drink'].indexOf(drinkItem._id) !== -1;
     })
   };
 
-  $scope.removeItem = function(id, category, index) {
+  $scope.removeItem = function(_id, category, index) {
     $scope.savedItems[category].splice(index, 1);
-    Saved.removeEntry(id, category);
+    Saved.removeEntry(_id, category);
   };
 
   // console.log('saved food items', $scope.savedItems.food);

@@ -32,7 +32,7 @@ angular.module('sendhalp.browse', [
   };
 
   $scope.addToList = function() {
-    var success = Saved.addEntry($scope.currEntry["id"], $scope.currCategory);
+    var success = Saved.addEntry($scope.currEntry["_id"], $scope.currCategory);
     if (!success) {
       // popup notify that it was not added
       console.log('failure');
@@ -60,7 +60,8 @@ angular.module('sendhalp.browse', [
   };
 
   // Generate the first random phrase upon loading
-  $scope.generateNext();
+  // execute after we get the phrases
+  //$scope.generateNext();
 
   // console.log($scope.currCategory);
   // console.log($scope.currEntry);
