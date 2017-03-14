@@ -1,25 +1,29 @@
 angular.module('sendhalp.factories', [])
 
 .factory('Saved', function() {
-  var savedEntries = [];
+  var savedEntries = {
+    'food': [],
+    'drink': []
+  };
 
-  var addEntry = function(id) {
+  var addEntry = function(id, category) {
     console.log(savedEntries);
 
-    if (savedEntries.indexOf(id) === -1) {
-      savedEntries.push(id);
+    if (savedEntries[category].indexOf(id) === -1) {
+      savedEntries[category].push(id);
       return true;
     } else {
       return false;
     }
   };
 
-  var removeEntry = function(id) {
+  var removeEntry = function(id, category) {
     console.log('called removeEntry from browseController');
 
   };
 
   return {
+    savedEntries, savedEntries,
     addEntry: addEntry,
     removeEntry: removeEntry
   };

@@ -15,10 +15,10 @@
     <div class="browse-content">
       <div class="entry-title">{{currEntry["title"]}}</div>
       <div class="entry-description">Description: {{currEntry["description"]}}</div>
-      <div class="-entry-url">Source: {{currEntry["url"]}}</div>
+      <div class="entry-url">Source: {{currEntry["url"]}}</div>
       <div class="entry-submittedBy">Submitted by {{currEntry["submittedBy"]}}</div>
     </div>
-    <div class="button-container">
+    <div class="browse-button-box">
       <div ng-click="addToList()">Ye, dat sounds dank (left)</div>
       <div ng-click="generateNext()">I ain't down for that (right)</div>
       <div ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</div>

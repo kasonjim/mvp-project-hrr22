@@ -32,7 +32,7 @@ angular.module('sendhalp.browse', [
   };
 
   $scope.addToList = function() {
-    var success = Saved.addEntry($scope.currEntry["id"]);
+    var success = Saved.addEntry($scope.currEntry["id"], $scope.currCategory);
     if (!success) {
       // popup notify that it was not added
       console.log('failure');
