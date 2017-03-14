@@ -61,6 +61,7 @@ angular.module('sendhalp.browse', [
 
   // Generate the first random phrase upon loading
   // execute after we get the phrases
+  // clicking on "i aint down for that" after page loaded works completely fine
   //$scope.generateNext();
 
   // console.log($scope.currCategory);

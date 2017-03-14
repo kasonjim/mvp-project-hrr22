@@ -8,7 +8,6 @@ angular.module('sendhalp.factories', [])
 
   var addEntry = function(_id, category) {
     // console.log(savedEntries);
-
     if (savedEntries[category].indexOf(_id) === -1) {
       savedEntries[category].push(_id);
       return true;
@@ -72,6 +71,7 @@ angular.module('sendhalp.factories', [])
   };
 
   var getEntries = function() {
+    console.log('getting');
     return $http({
       method: 'GET',
       url: '/api/entries'
@@ -88,12 +88,17 @@ angular.module('sendhalp.factories', [])
     });
   };
 
-  // LATER TO BE DONE WITH A POST REQUEST, THEN A PROMISE TO GET ENTRIES (NOTED ABOVE);
-  // FUTURE NOTE: WE ARE POSTING TO ONE "ENTRY" TABLE
   var postEntry = function(submission) {
     submission._id = Date.now();
-
-    // entries[submission.category].push(submission);
+    return $http({
+      method: 'POST',
+      url: '/api/entries',
+      data: submission
+    })
+    .then(function(res) {
+      console.log(res);
+      getEntries();
+    });
   };
 
   // invoke getEntries upon initialization of page

@@ -23,9 +23,12 @@ exports.getEntries = function(req, res) {
 };
 
 exports.postEntry = function(req, res) {
-  //res.status(201).send('success from postEntry');
-  // post entry from req into mongo
-  // return response 201 with "success"
+  new Entries(req.body).save(function(err) {
+    if (err) {
+      return console.log('error', err);
+    }
+    res.status(201).send('Successfully added');
+  });
 };
 
 exports.redirect = function(req, res) {
