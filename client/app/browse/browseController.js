@@ -13,8 +13,8 @@ angular.module('sendhalp.browse', [
 
   // Array of titles, and phrases for each category
   $scope.titles = {
-    'food': 'I see dat you be starvin',
-    'drink': 'You look like you had a long week with the 22\'s'
+    'food': 'I\'m part of dat world hunger statistic',
+    'drink': 'Them 22\'s givin me the run-around.'
   };
 
   $scope.phrases = {
@@ -63,20 +63,23 @@ angular.module('sendhalp.browse', [
     // need to autopopulate the $scope.phrases and $scope.entries
     // Entries: { id, category, title, url, description, submittedBy, thumbnail source  } - included: createdAt/modifiedAt
     // Phrases: { id, category, text } - included: createdAt/modifiedAt
+  // finish popup stuff below in addToList
 
   $scope.addToList = function() {
-    // add to saved list in factories "Saved"
-    // need to get id of CURRENT viewing object - save this data somewhere
-    //Saved.addEntry(1);
-
-
-    $scope.generatePhrase();
+    var success = Saved.addEntry($scope.currEntry["id"]);
+    if (!success) {
+      // popup notify that it was not added
+      console.log('failure');
+    } else {
+      // popup notify that it was added
+      console.log('success');
+    }
+    $scope.generateNext();
   };
 
   $scope.generateNext = function() {
     var index = Math.floor(Math.random() * $scope.entries[$scope.currCategory].length);
     $scope.currEntry = $scope.entries[$scope.currCategory][index];
-    console.log(index);
     $scope.generatePhrase();
   };
 
@@ -93,10 +96,10 @@ angular.module('sendhalp.browse', [
   // Generate the first random phrase upon loading
   $scope.generateNext();
 
-  console.log($scope.currCategory);
-  console.log($scope.currEntry);
-  console.log($scope.titles);
-  console.log($scope.phrases);
-  console.log($scope.entries);
-  console.log($scope.switchButtonText);
+  // console.log($scope.currCategory);
+  // console.log($scope.currEntry);
+  // console.log($scope.titles);
+  // console.log($scope.phrases);
+  // console.log($scope.entries);
+  // console.log($scope.switchButtonText);
 });

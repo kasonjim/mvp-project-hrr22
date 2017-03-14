@@ -4,15 +4,19 @@ angular.module('sendhalp.factories', [])
   var savedEntries = [];
 
   var addEntry = function(id) {
-    console.log('called addEntry from browseController');
-  };
+    console.log(savedEntries);
 
-  var checkIfSaved = function(id) {
-
+    if (savedEntries.indexOf(id) === -1) {
+      savedEntries.push(id);
+      return true;
+    } else {
+      return false;
+    }
   };
 
   var removeEntry = function(id) {
     console.log('called removeEntry from browseController');
+
   };
 
   return {
