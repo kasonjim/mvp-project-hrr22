@@ -7,8 +7,15 @@
     </ul>
   </nav>
 
-  This is the submit page
   <div class="submit-content">
+    <form ng-submit="submitNewEntry()">
+      Name: <input ng-model="submittedBy"/><br />
+      Category: <input ng-model="category"/><br />
+      Title: <input ng-model="title"/><br />
+      Description: <input ng-model="description"/><br />
+      URL: <input ng-model="url"/><br />
+      <button type="submit">Submit</button>
+    </form>
     <!-- form -->
     <!-- title, category, description, url, submitBy name -->
     <!-- submit button -->

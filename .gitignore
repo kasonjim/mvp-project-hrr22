@@ -5,6 +5,7 @@
 node_modules
 project_files
 npm-debug.log
+# client/assets
 
 # Floobits
 .floo
