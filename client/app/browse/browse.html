@@ -13,9 +13,10 @@
       {{currPhrase}}
     </h2>
     <div class="browse-content">
-      <div class="entry-title">Random entry title</div>
-      <div class="entry-description">Random entry description</div>
-      <div class="entry-submittedBy">Entry submitted by name</div>
+      <div class="entry-title">{{currEntry["title"]}}</div>
+      <div class="entry-description">Description: {{currEntry["description"]}}</div>
+      <div class="-entry-url">Source: {{currEntry["url"]}}</div>
+      <div class="entry-submittedBy">Submitted by {{currEntry["submittedBy"]}}</div>
     </div>
     <div class="button-container">
       <div ng-click="addToList()">Ye, dat sounds dank (left)</div>

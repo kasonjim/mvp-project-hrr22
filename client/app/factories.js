@@ -3,14 +3,21 @@ angular.module('sendhalp.factories', [])
 .factory('Saved', function() {
   var savedEntries = [];
 
-  // function to add to savedEntries
-  // subfunction to see if it's already in the array
-    //error if so
-    //add otherwise
+  var addEntry = function(id) {
+    console.log('called addEntry from browseController');
+  };
 
-  // functions to save, alter, and return array
+  var checkIfSaved = function(id) {
+
+  };
+
+  var removeEntry = function(id) {
+    console.log('called removeEntry from browseController');
+  };
+
   return {
-
+    addEntry: addEntry,
+    removeEntry: removeEntry
   };
 })
 
