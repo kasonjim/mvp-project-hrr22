@@ -73,11 +73,4 @@ angular.module('sendhalp.browse', [
   } else {
     $scope.generateNext();
   }
-
-  // console.log($scope.currCategory);
-  // console.log($scope.currEntry);
-  // console.log($scope.titles);
-  // console.log($scope.phrases);
-  // console.log($scope.entries);
-  // console.log($scope.switchButtonText);
 });

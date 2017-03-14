@@ -2,6 +2,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.ltr {
+  color: red;
+}
+
 /* Navigation */
 .navigation {
   width: 1100px;
