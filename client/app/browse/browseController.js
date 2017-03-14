@@ -8,16 +8,17 @@ angular.module('sendhalp.browse', [
 
   // Current page category (default = food)
   $scope.currCategory = foodString;
+  $scope.currPhrase = '';
 
   // Array of titles, and phrases for each category
   $scope.titles = {
-    'food': 'Title Phrase for food category',
-    'drink': 'Title Phrase for drink category'
+    'food': 'Title Phrase for FOOD category',
+    'drink': 'Title Phrase for DRINK category'
   };
 
   $scope.phrases = {
-    'food': [],    // LATER TO BE POPULATED FROM "GET" REQUEST
-    'drink': []    // LATER TO BE POPULATED FROM "GET" REQUEST
+    'food': ['test FOOD phrase 1', 'test FOOD phrase 2', 'test FOOD phrase 3'],    // LATER TO BE POPULATED FROM "GET" REQUEST
+    'drink': ['test DRINK phrase 1', 'test DRINK phrase 2', 'test DRINK phrase 3']    // LATER TO BE POPULATED FROM "GET" REQUEST
   };
 
   $scope.entries = {
@@ -31,27 +32,34 @@ angular.module('sendhalp.browse', [
   };
 
   $scope.generatePhrase = function() {
-
+    var index = Math.floor(Math.random() * $scope.phrases[$scope.currCategory].length);
+    $scope.currPhrase = $scope.phrases[$scope.currCategory][index];
   };
 
   $scope.addToList = function() {
-    console.log('addToList called');
     // add to saved list in factories "Saved"
-    // trigger another random phrase
+
+    $scope.generatePhrase();
   };
 
   $scope.generateNext = function() {
-    console.log('generateNext called');
-    // trigger random phrase
+    // select next entry
+
+    $scope.generatePhrase();
   };
 
   $scope.toggleCategory = function() {
     if ($scope.currCategory === foodString) {
       $scope.currCategory = drinkString;
+      $scope.generatePhrase();
     } else {
       $scope.currCategory = foodString;
+      $scope.generatePhrase();
     }
   };
+
+  // Generate the first random phrase upon loading
+  $scope.generatePhrase();
 
   console.log($scope.currCategory);
   console.log($scope.titles);
