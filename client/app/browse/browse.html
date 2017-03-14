@@ -11,19 +11,19 @@
     <img class="bg-img" src="../../assets/generator.jpg">
     <div class="browse-separator"></div>
     <div class="browse-detail-box">
-      <h2>
-        {{titles[currCategory]}}<br />
-        {{currPhrase}}
-      </h2>
-      <div class="entry-title">{{currEntry["title"]}}</div>
-      <div class="entry-description">Description: {{currEntry["description"]}}</div>
-      <div class="entry-url">Source: {{currEntry["url"]}}</div>
-      <div class="entry-submittedBy">Submitted by {{currEntry["submittedBy"]}}</div>
-      <div class="browse-button-box">
-        <button class="add" ng-click="addToList()">Ye, dat sounds dank (left)</button>
-        <button class="skip" ng-click="generateNext()">I ain't down for that (right)</button><br />
-        <button class="toggle" ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</button>
+      <h1>{{titles[currCategory]}}</h1>
+      <h2>{{currPhrase}}</h2>
+
+      <div class="entry-box">
+        <div class="entry-title">{{currEntry["title"]}}</div>
+        <div class="entry-description">{{currEntry["description"]}}</div>
+        <div class="entry-url">Source: {{currEntry["url"]}}</div>
+        <div class="entry-submittedBy">Submitted by {{currEntry["submittedBy"]}}</div>
       </div>
+
+      <button class="add" ng-click="addToList()">Ye, dat sounds dank</button>
+      <button class="skip" ng-click="generateNext()">I ain't down for that</button><br />
+      <button class="toggle" ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</button>
     </div>
   </div>
 </div>

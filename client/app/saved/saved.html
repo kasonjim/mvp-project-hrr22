@@ -12,7 +12,7 @@
     <div class="saved-left-box">
       <h2>Saved Food</h2>
       <div class="saved-item" ng-repeat="food in savedItems.food">
-        {{food.title}}
+        <span class="saved-item-title"><a href="{{food.url}}" target="_blank">{{food.title}}</a></span>
         <img src="../../assets/remove-icon-2.png" width="20px" ng-click="removeItem(food.id, food.category, $index)">
       </div>
     </div>
@@ -20,7 +20,7 @@
     <div class="saved-right-box">
       <h2>Saved Drinks</h2>
       <div class="saved-item" ng-repeat="drink in savedItems.drink">
-        {{drink.title}}
+        <span class="saved-item-title"><a href="{{drink.url}}" target="_blank">{{drink.title}}</a></span>
         <img src="../../assets/remove-icon-2.png" width="20px" ng-click="removeItem(drink.id, drink.category, $index)">
       </div>
     </div>

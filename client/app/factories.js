@@ -73,14 +73,14 @@ angular.module('sendhalp.factories', [])
   var entries = {
     // LATER TO BE POPULATED FROM "GET" REQUEST
     'food': [
-      { id: 1, category: 'food', title: 'test FOOD entry 1', url: 'www.1.com', description: 'asdf', submittedBy: 'Ife'},
-      { id: 2, category: 'food', title: 'test FOOD entry 2', url: 'www.2.com', description: 'q2r3', submittedBy: 'Tre'},
-      { id: 3, category: 'food', title: 'test FOOD entry 3', url: 'www.3.com', description: 'fiew', submittedBy: 'Robin'}
+      { id: 1, category: 'food', title: 'FOOD entry #1', url: 'http://www.amazon.com', description: 'asdf', submittedBy: 'Ife'},
+      { id: 2, category: 'food', title: 'FOOD entry #2', url: 'http://www.google.com', description: 'q2r3', submittedBy: 'Tre'},
+      { id: 3, category: 'food', title: 'FOOD entry #3', url: 'http://www.bestbuy.com', description: 'fiew', submittedBy: 'Robin'}
     ],
     'drink': [
-      { id: 4, category: 'drink', title: 'test DRINK entry 1', url: 'www.4.com', description: 'oepw', submittedBy: 'Tre'},
-      { id: 5, category: 'drink', title: 'test DRINK entry 2', url: 'www.5.com', description: '49zz', submittedBy: 'Cody'},
-      { id: 6, category: 'drink', title: 'text DRINK entry 3', url: 'www.6.com', description: '9328', submittedBy: 'Luke'}
+      { id: 4, category: 'drink', title: 'DRINK entry #1', url: 'http://www.facebook.com', description: 'oepw', submittedBy: 'Tre'},
+      { id: 5, category: 'drink', title: 'DRINK entry #2', url: 'http://www.stackoverflow.com', description: '49zz', submittedBy: 'Cody'},
+      { id: 6, category: 'drink', title: 'DRINK entry #3', url: 'http://www.quora.com', description: '9328', submittedBy: 'Luke'}
     ]
   };
 

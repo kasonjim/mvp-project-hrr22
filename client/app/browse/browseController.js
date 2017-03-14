@@ -14,7 +14,7 @@ angular.module('sendhalp.browse', [
   // Array of titles, and phrases for each category
   $scope.titles = {
     'food': 'I\'m part of dat world hunger statistic',
-    'drink': 'Them 22\'s givin me the run-around.'
+    'drink': 'Them 22\'s givin me the run-around'
   };
 
   $scope.phrases = Phrases.phrases;
