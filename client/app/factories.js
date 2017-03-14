@@ -42,21 +42,24 @@ angular.module('sendhalp.factories', [])
       method: 'GET',
       url: '/api/phrases'
     })
-    .then(function(res) {
-      var receivedPhrases = res.data;
-      receivedPhrases.forEach(function(phrase) {
-        if (phrase.category === 'food') {
-          phrases.food.push(phrase);
-        } else {
-          phrases.drink.push(phrase);
-        }
+    .then(function(result) {
+      return new Promise(function(next) {
+        var receivedPhrases = result.data;
+        receivedPhrases.forEach(function(phrase) {
+          if (phrase.category === 'food') {
+            phrases.food.push(phrase);
+          } else {
+            phrases.drink.push(phrase);
+          }
+        });
+
+        next();
       });
-      console.log(phrases);
     });
   };
 
   // invoke getPhrases upon initialization of page
-  getPhrases();
+  // getPhrases();
 
   return {
     phrases: phrases,
@@ -71,19 +74,22 @@ angular.module('sendhalp.factories', [])
   };
 
   var getEntries = function() {
-    console.log('getting');
     return $http({
       method: 'GET',
       url: '/api/entries'
     })
-    .then(function(res) {
-      var receivedEntries = res.data;
-      receivedEntries.forEach(function(entry) {
-        if (entry.category === 'food') {
-          entries.food.push(entry);
-        } else {
-          entries.drink.push(entry);
-        }
+    .then(function(result) {
+      return new Promise(function(next) {
+        var receivedEntries = result.data;
+        receivedEntries.forEach(function(entry) {
+          if (entry.category === 'food') {
+            entries.food.push(entry);
+          } else {
+            entries.drink.push(entry);
+          }
+        });
+
+        next();
       });
     });
   };
@@ -102,7 +108,7 @@ angular.module('sendhalp.factories', [])
   };
 
   // invoke getEntries upon initialization of page
-  getEntries();
+  // getEntries();
 
   return {
     entries: entries,

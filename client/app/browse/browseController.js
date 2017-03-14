@@ -13,7 +13,7 @@ angular.module('sendhalp.browse', [
 
   // Array of titles, and phrases for each category
   $scope.titles = {
-    'food': 'I\'m part of dat world hunger statistic',
+    'food': 'My stomach is about to eat itself',
     'drink': 'Them 22\'s givin me the run-around'
   };
 
@@ -34,11 +34,7 @@ angular.module('sendhalp.browse', [
   $scope.addToList = function() {
     var success = Saved.addEntry($scope.currEntry["_id"], $scope.currCategory);
     if (!success) {
-      // popup notify that it was not added
-      console.log('failure');
-    } else {
-      // popup notify that it was added
-      console.log('success');
+      alert('This item is already in your saved list!');
     }
     $scope.generateNext();
   };
@@ -60,9 +56,23 @@ angular.module('sendhalp.browse', [
   };
 
   // Generate the first random phrase upon loading
-  // execute after we get the phrases
-  // clicking on "i aint down for that" after page loaded works completely fine
-  //$scope.generateNext();
+  // If there are no phrases in the factories storage arrays,
+  // call get requests and then generate after successfully
+  // getting content from server
+  if ($scope.phrases.food.length === 0 || $scope.entries.food.length === 0) {
+    console.log('generating for first time');
+    Phrases.getPhrases()
+      .then(function() {
+        console.log('got phrases');
+        return Entries.getEntries();
+      })
+      .then(function() {
+        console.log('got entries, now generating page');
+        $scope.generateNext();
+      });
+  } else {
+    $scope.generateNext();
+  }
 
   // console.log($scope.currCategory);
   // console.log($scope.currEntry);

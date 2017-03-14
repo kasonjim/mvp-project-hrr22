@@ -12,7 +12,7 @@ angular.module('sendhalp.submit', [])
         $scope.url === undefined ||
         $scope.url.length === 0) {
       console.log('Error submitting new entry: all fiends must be filled out');
-      // SOME ERROR MESSAGE?
+      alert('Please fill out all fields before submitting');
     } else {
       Entries.postEntry({
         submittedBy: $scope.submittedBy,
@@ -26,7 +26,8 @@ angular.module('sendhalp.submit', [])
       $scope.title = '';
       $scope.description = '';
       $scope.url = '';
-      // SOME SUCCESS MESSAGE?
+
+      alert('Successfully added');
     }
   };
 });
