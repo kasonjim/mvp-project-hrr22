@@ -8,6 +8,7 @@
   </nav>
 
   <div class="saved-content">
+    <img class="bg-img" src="../../assets/saved.jpg">
     <div class="saved-left-box">
       <h2>Saved Food</h2>
       <div class="saved-item" ng-repeat="food in savedItems.food">
@@ -15,6 +16,7 @@
         <img src="../../assets/remove-icon-2.png" width="20px" ng-click="removeItem(food.id, food.category, $index)">
       </div>
     </div>
+    <div class="saved-separator"></div>
     <div class="saved-right-box">
       <h2>Saved Drinks</h2>
       <div class="saved-item" ng-repeat="drink in savedItems.drink">

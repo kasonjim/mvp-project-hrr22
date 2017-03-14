@@ -1,3 +1,4 @@
+/* Navigation */
 .navigation {
   width: 1100px;
   height: 40px;
@@ -30,6 +31,69 @@
 .navigation li a.selected {
   background-color: #c2c2a3;
 }
+
+/* Background images for each page */
+.browse-content, .saved-content, .submit-content {
+  width: 1100px;
+  display: inline;
+  position: relative;
+}
+
+.bg-img {
+  width: 1100px;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Browse */
+.browse-separator {
+  width: 360px;
+  float: left;
+  margin: 1px 1px;
+}
+
+.browse-detail-box {
+  width: 660px;
+  height: 540px;
+  border-radius: 10px;
+  opacity: 0.9;
+  background-color: #00d0ff;
+  float: left;
+  margin: 28px 0px 0px 0px;
+  padding: 5px 20px 20px 20px;
+}
+
+/* Saved */
+.saved-left-box {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color: #adffb5;
+  float: left;
+  margin: 28px 0px 0px 37px;
+  padding: 5px 20px 20px 20px;
+}
+
+.saved-separator {
+  width: 335px;
+  float: left;
+  margin: 1px 1px;
+}
+
+.saved-right-box {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color: #adffb5;
+  float: left;
+  margin: 28px 0px 0px 0px;
+  padding: 5px 20px 20px 20px;
+}
+
+/* Submit */
+
 
 .browse-button-box {
   border-style: solid;

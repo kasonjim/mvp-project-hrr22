@@ -54,14 +54,14 @@ angular.module('sendhalp.factories', [])
     ]
   };
 
+  // LATER TO BE DONE WITH A GET REQUEST, THEN A PROMISE, TO GET PHRASES FROM SERVER DATABASE
+  var getPhrases = function() {
 
-
-  // function to get phrases from server
-
-
+  };
 
   return {
-    phrases: phrases
+    phrases: phrases,
+    getPhrases: getPhrases
   };
 })
 
@@ -73,29 +73,31 @@ angular.module('sendhalp.factories', [])
   var entries = {
     // LATER TO BE POPULATED FROM "GET" REQUEST
     'food': [
-      { id: 1, category: 'food', title: 'test FOOD entry 1', url: 'www.1.com', description: 'asdf', submittedBy: 'Ife', thumbnail: 'src' },
-      { id: 2, category: 'food', title: 'test FOOD entry 2', url: 'www.2.com', description: 'q2r3', submittedBy: 'Tre', thumbnail: 'src' },
-      { id: 3, category: 'food', title: 'test FOOD entry 3', url: 'www.3.com', description: 'fiew', submittedBy: 'Robin', thumbnail: 'src' }
+      { id: 1, category: 'food', title: 'test FOOD entry 1', url: 'www.1.com', description: 'asdf', submittedBy: 'Ife'},
+      { id: 2, category: 'food', title: 'test FOOD entry 2', url: 'www.2.com', description: 'q2r3', submittedBy: 'Tre'},
+      { id: 3, category: 'food', title: 'test FOOD entry 3', url: 'www.3.com', description: 'fiew', submittedBy: 'Robin'}
     ],
     'drink': [
-      { id: 4, category: 'drink', title: 'test DRINK entry 1', url: 'www.4.com', description: 'oepw', submittedBy: 'Tre', thumbnail: 'src' },
-      { id: 5, category: 'drink', title: 'test DRINK entry 2', url: 'www.5.com', description: '49zz', submittedBy: 'Cody', thumbnail: 'src' },
-      { id: 6, category: 'drink', title: 'text DRINK entry 3', url: 'www.6.com', description: '9328', submittedBy: 'Luke', thumbnail: 'src' }
+      { id: 4, category: 'drink', title: 'test DRINK entry 1', url: 'www.4.com', description: 'oepw', submittedBy: 'Tre'},
+      { id: 5, category: 'drink', title: 'test DRINK entry 2', url: 'www.5.com', description: '49zz', submittedBy: 'Cody'},
+      { id: 6, category: 'drink', title: 'text DRINK entry 3', url: 'www.6.com', description: '9328', submittedBy: 'Luke'}
     ]
   };
 
+  // LATER TO BE DONE WITH A GET REQUEST, THEN A PROMISE
+  var getEntries = function() {
 
+  };
 
-  // functions to get entries
-
-  // function to post entries
-    // LATER TO BE DONE WITH A POST REQUEST, THEN A PROMISE TO GET ENTRIES (NOTED ABOVE);
+  // LATER TO BE DONE WITH A POST REQUEST, THEN A PROMISE TO GET ENTRIES (NOTED ABOVE);
   var postEntry = function(submission) {
-    console.log("accessed!", submission);
+    submission.id = 7;
+    entries[submission.category].push(submission);
   };
 
   return {
     entries: entries,
+    getEntries: getEntries,
     postEntry: postEntry
   };
 });
