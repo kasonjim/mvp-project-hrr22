@@ -10,15 +10,17 @@
   <div class="submit-content">
     <form ng-submit="submitNewEntry()">
       Name: <input ng-model="submittedBy"/><br />
-      Category: <input ng-model="category"/><br />
+      Category:
+        <select ng-model="category">
+          <option value="food">Food</option>
+          <option value="drink">Drink</option>
+        </select>
+        <br />
       Title: <input ng-model="title"/><br />
       Description: <input ng-model="description"/><br />
       URL: <input ng-model="url"/><br />
       <button type="submit">Submit</button>
     </form>
-    <!-- form -->
-    <!-- title, category, description, url, submitBy name -->
-    <!-- submit button -->
   </div>
 
 </div>

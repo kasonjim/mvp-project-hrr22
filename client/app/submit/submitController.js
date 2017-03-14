@@ -1,11 +1,13 @@
 angular.module('sendhalp.submit', [])
-.controller('SubmitController', function($scope) {
+.controller('SubmitController', function($scope, Entries) {
 
   $scope.submitNewEntry = function() {
-    console.log('submission', $scope.submittedBy);
-    console.log('submission', $scope.category);
-    console.log('submission', $scope.title);
-    console.log('submission', $scope.description);
-    console.log('submission', $scope.url);
+    Entries.postEntry({
+      submittedBy: $scope.submittedBy,
+      category: $scope.category,
+      title: $scope.title,
+      description: $scope.description,
+      url: $scope.url
+    });
   };
 });

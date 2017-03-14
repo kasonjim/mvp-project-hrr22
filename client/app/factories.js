@@ -86,11 +86,16 @@ angular.module('sendhalp.factories', [])
 
 
 
-  // functions to get and post entries
+  // functions to get entries
 
-
+  // function to post entries
+    // LATER TO BE DONE WITH A POST REQUEST, THEN A PROMISE TO GET ENTRIES (NOTED ABOVE);
+  var postEntry = function(submission) {
+    console.log("accessed!", submission);
+  };
 
   return {
-    entries: entries
+    entries: entries,
+    postEntry: postEntry
   };
 });
