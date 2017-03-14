@@ -7,7 +7,7 @@ angular.module('sendhalp.factories', [])
   };
 
   var addEntry = function(id, category) {
-    console.log(savedEntries);
+    // console.log(savedEntries);
 
     if (savedEntries[category].indexOf(id) === -1) {
       savedEntries[category].push(id);
@@ -18,8 +18,11 @@ angular.module('sendhalp.factories', [])
   };
 
   var removeEntry = function(id, category) {
-    console.log('called removeEntry from browseController');
-
+    if (savedEntries[category].indexOf !== -1) {
+      savedEntries[category].splice(savedEntries[category].indexOf(id), 1);
+    } else {
+      console.log('entry does not exist in savedEntries anymore');
+    }
   };
 
   return {
