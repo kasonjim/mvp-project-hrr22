@@ -20,9 +20,9 @@
       <div class="entry-url">Source: {{currEntry["url"]}}</div>
       <div class="entry-submittedBy">Submitted by {{currEntry["submittedBy"]}}</div>
       <div class="browse-button-box">
-        <div ng-click="addToList()">Ye, dat sounds dank (left)</div>
-        <div ng-click="generateNext()">I ain't down for that (right)</div>
-        <div ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</div>
+        <button class="add" ng-click="addToList()">Ye, dat sounds dank (left)</button>
+        <button class="skip" ng-click="generateNext()">I ain't down for that (right)</button><br />
+        <button class="toggle" ng-click="toggleCategory()">{{switchButtonText[currCategory]}}</button>
       </div>
     </div>
   </div>

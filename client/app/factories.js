@@ -85,11 +85,14 @@ angular.module('sendhalp.factories', [])
   };
 
   // LATER TO BE DONE WITH A GET REQUEST, THEN A PROMISE
+  // FUTURE NOTE: WE ARE GETTING DATA FROM ONE ENTRY TABLE
+  // WE WILL NEED TO SORT IT LATER
   var getEntries = function() {
 
   };
 
   // LATER TO BE DONE WITH A POST REQUEST, THEN A PROMISE TO GET ENTRIES (NOTED ABOVE);
+  // FUTURE NOTE: WE ARE POSTING TO ONE "ENTRY" TABLE
   var postEntry = function(submission) {
     submission.id = 7;
     entries[submission.category].push(submission);
