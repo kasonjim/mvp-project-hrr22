@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Navigation */
 .navigation {
   width: 1100px;
@@ -98,9 +102,10 @@
 }
 
 .add, .skip {
+  font-weight: bolder;
   width: 48%;
   margin-top: 20px;
-  padding: 15px 80px;
+  padding: 15px;
 }
 
 .add {
@@ -114,9 +119,10 @@
 }
 
 .toggle {
+  font-weight: bolder;
   width: 100%;
   margin-top: 20px;
-  padding: 10px 197px;
+  padding: 10px;
 }
 
 
@@ -170,3 +176,30 @@
 }
 
 /* Submit */
+.submit-content form {
+  max-width: 420px;
+  margin: 20px 0 0 50px;
+  padding: 25px;
+  background-color:grey;
+}
+
+.submit-content li {
+  padding: 0 0 10px 0;
+  display: block;
+  list-style: none;
+}
+
+.submit-content label {
+  padding: 0 0 5px 0;
+  display: block;
+  font-weight: bold;
+}
+
+.submit-content input {
+  width: 400px;
+}
+
+.submit-content button {
+  font-weight: bolder;
+  padding: 5px 20px;
+}
