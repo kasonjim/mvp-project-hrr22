@@ -58,12 +58,12 @@ body {
 
 .browse-detail-box {
   width: 600px;
-  height: 450px;
+  height: 520px;
   border-radius: 10px;
   opacity: 0.95;
   background-color: #00d0ff;
   float: left;
-  margin: 60px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
   padding: 5px 20px 20px 20px;
 }
 
@@ -74,6 +74,7 @@ body {
 
 .entry-box {
   width: 100%;
+  height: 250px;
   border-radius: 5px;
   background-color: #d3e4ff;
 }
@@ -89,15 +90,17 @@ body {
 }
 
 .entry-description {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .entry-url {
+  font-size: 14px;
   font-style: italic;
 }
 
 .entry-submittedBy {
   font-style: italic;
+  color: red;
   padding-bottom: 10px;
 }
 
@@ -131,7 +134,7 @@ body {
   text-decoration: underline;
 }
 
-.saved-left-box {
+.saved-left-box, .saved-right-box {
   width: 300px;
   height: 500px;
   border-radius: 10px;
@@ -149,29 +152,22 @@ body {
 }
 
 .saved-right-box {
-  width: 300px;
-  height: 500px;
-  border-radius: 10px;
-  opacity: 0.8;
-  background-color: #adffb5;
-  float: left;
   margin: 28px 0px 0px 0px;
-  padding: 5px 20px 20px 20px;
 }
 
 .saved-item {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .saved-item img {
   vertical-align: bottom
 }
 
-.saved-item-title {
+.saved-item-entry {
   font-size: 18px;
 }
 
-.saved-item-title a {
+.saved-item-entry a {
   text-decoration: none
 }
 
